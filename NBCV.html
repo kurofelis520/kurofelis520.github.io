@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星際騙局解密 | 拒絕玄學詐騙</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#121212',
+                        danger: '#ef4444',
+                        warning: '#f59e0b',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-answer.open { max-height: 500px; }
+        .rotate-icon { transition: transform 0.3s ease; }
+        .open .rotate-icon { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="antialiased selection:bg-danger selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-panel border-b border-gray-700">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-shield-halved text-danger text-2xl"></i>
+                    <span class="font-bold text-xl tracking-wider">防詐騙<span class="text-danger">解密</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#event" class="hover:text-danger transition">事件還原</a>
+                    <a href="#tactics" class="hover:text-danger transition">話術解析</a>
+                    <a href="#faq" class="hover:text-danger transition">常見問答 (FAQ)</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex flex-col items-center text-center">
+        <div class="inline-block bg-danger/20 text-danger border border-danger/50 rounded-full px-4 py-1.5 text-sm font-semibold mb-6 shadow-[0_0_15px_rgba(239,68,68,0.5)]">
+            <i class="fa-solid fa-triangle-exclamation mr-2"></i> 警惕醫療與玄學詐騙
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+            台大畢業神婆說她<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-danger to-warning">超度了整間醫院？！</span>
+        </h1>
+        <p class="text-lg text-gray-400 max-w-2xl mb-10 leading-relaxed">
+            從外商百萬年薪到宣稱來自「毛素星與獵戶座」的星際種子。盜用病患 CT 斷層掃描照宣傳「醫療奇蹟」，一堂課開價 7400 元。這是信仰，還是利用人心脆弱的收割？
+        </p>
+        <div class="w-full max-w-md relative">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+            <input type="text" id="searchInput" placeholder="搜尋關鍵字 (例如：元辰宮, CT照片, 惡鬼...)" 
+                   class="w-full pl-12 pr-4 py-3 rounded-xl bg-gray-800 border border-gray-700 focus:border-danger focus:ring-1 focus:ring-danger outline-none transition text-white placeholder-gray-500">
+        </div>
+    </section>
+
+    <!-- 事件還原 Section -->
+    <section id="event" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 border-l-4 border-danger pl-4">造假鐵證：事件還原</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
+                <div class="absolute top-0 right-0 bg-danger text-white text-xs font-bold px-3 py-1 rounded-bl-lg">荒謬宣稱</div>
+                <h3 class="text-xl font-bold mb-4 text-warning"><i class="fa-solid fa-ghost mr-2"></i>手術室前的「惡鬼」</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    她宣稱母親生病長了五公斤腫瘤，手術當天看到「一群惡鬼要衝進手術室」。她自稱沒有逃，反而請來了「關聖帝君」守門，並「超度了整間醫院」。將醫生的專業急救，包裝成自己的「靈性能量」功勞，極度傲慢。
+                </p>
+            </div>
+            <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group border-danger/30 shadow-[0_0_20px_rgba(239,68,68,0.1)]">
+                <div class="absolute top-0 right-0 bg-danger text-white text-xs font-bold px-3 py-1 rounded-bl-lg">鐵證如山</div>
+                <h3 class="text-xl font-bold mb-4 text-danger"><i class="fa-solid fa-file-medical mr-2"></i>盜用他人 CT 斷層掃描</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    影片中用來證實「母親腫瘤奇蹟」的斷層照片，竟是**盜用另一位張姓病患（長達 7 公分畸胎瘤）的真實病歷照片**！當事人發現後憤而提告。事後神婆雖發文道歉，卻推託是「合作剪輯師未經授權上網抓取」。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 話術解析 Section -->
+    <section id="tactics" class="py-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto bg-gray-900/50 rounded-3xl my-10">
+        <h2 class="text-3xl font-bold mb-10 border-l-4 border-warning pl-4">話術解析：何謂「元辰宮」？</h2>
+        <div class="text-gray-300 leading-relaxed space-y-6">
+            <p>
+                她宣稱能幫人看「前世今生」、「元辰宮」，甚至開價 55 分鐘 7400 元。所謂的「元辰宮」，被包裝成每個人在靈界的專屬居所（客廳代表運勢等），裡面有冤親債主就是犯小人。
+            </p>
+            <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 text-sm md:text-base">
+                <p class="font-semibold text-white mb-2"><i class="fa-solid fa-lightbulb text-warning mr-2"></i> 網友的「星際車」神比喻破解：</p>
+                <blockquote class="italic text-gray-400">
+                    「這跟夢到哪句說哪句有什麼區別？我也能發明一套理論：每個人心中都有一台『星際車』。有些人是勞斯萊斯，有些人是破腳踏車。如果最近不順，是因為你的星際車在你沒注意時『撞到人』了！來我的廟裡，我幫你的星際車打官司、做清洗（收費），小人就會離開。——這跟他們編的故事有什麼本質上的區別？你怎麼知道誰真誰假？」
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-10 text-center">常見問答 (FAQ)</h2>
+        
+        <div class="space-y-4" id="faqContainer">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item glass-panel rounded-xl overflow-hidden" data-keywords="星際種子 獵戶座 毛素星">
+                <button class="faq-button w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                    <span class="font-semibold text-lg text-white">什麼是「星際種子」？她為什麼說自己來自毛素星？</span>
+                    <i class="fa-solid fa-chevron-down text-gray-400 rotate-icon"></i>
+                </button>
+                <div class="faq-answer px-6 pb-0 text-gray-400">
+                    <div class="pb-5">
+                        這是一種新時代（New Age）靈性圈常見的包裝話術。自稱靈魂來自外星（如昴宿星、獵戶座），宣稱自己帶有特殊使命來「拯救地球」或「消除業力」。實際上這只是一種無法被證偽的自我神化設定，用來墊高自己的身價以吸引信徒。
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item glass-panel rounded-xl overflow-hidden" data-keywords="超度 醫院 關羽 惡鬼 醫生">
+                <button class="faq-button w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                    <span class="font-semibold text-lg text-white">她真的「超度」了整間醫院的惡鬼嗎？</span>
+                    <i class="fa-solid fa-chevron-down text-gray-400 rotate-icon"></i>
+                </button>
+                <div class="faq-answer px-6 pb-0 text-gray-400">
+                    <div class="pb-5">
+                        完全是誇大其詞與搶奪醫療人員的功勞。當患者得救，靠的是主治醫生與護理團隊的專業手術，而不是她在手術室門口「幻想」召喚三國的關羽來擋鬼。這種將自然界的未知事物全貼上「惡鬼」標籤，並自封為救世主的行為，不僅傲慢，也是對醫療專業極大的不尊重。
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item glass-panel rounded-xl overflow-hidden" data-keywords="造假 ct照片 斷層掃描 提告 張小姐">
+                <button class="faq-button w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                    <span class="font-semibold text-lg text-white">為什麼她會被炎上（遭到大眾抨擊）？</span>
+                    <i class="fa-solid fa-chevron-down text-gray-400 rotate-icon"></i>
+                </button>
+                <div class="faq-answer px-6 pb-0 text-gray-400">
+                    <div class="pb-5">
+                        因為她為了證明自己法力高強（宣稱母親腫瘤是醫學奇蹟），在宣傳影片中盜用了另一位病患（張小姐）的真實電腦斷層（CT）掃描照片。當事人發現自己的病歷被神婆拿來打廣告斂財，憤而公開揭發並提告。事後神婆將責任推卸給剪輯師，引發網友憤怒並向內政部檢舉。
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item glass-panel rounded-xl overflow-hidden" data-keywords="收費 7400 療癒 詐騙">
+                <button class="faq-button w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+                    <span class="font-semibold text-lg text-white">遇到這類「身心靈服務」該如何防範？</span>
+                    <i class="fa-solid fa-chevron-down text-gray-400 rotate-icon"></i>
+                </button>
+                <div class="faq-answer px-6 pb-0 text-gray-400">
+                    <div class="pb-5">
+                        保持理性與懷疑的態度。許多不肖業者會利用民眾在低潮、生病時的脆弱心理，編造如「冤親債主」、「祖先業力」等恐嚇性詞彙，再收取高昂費用（如一小時 7400 元）。如果遇到生病，請尋求正規醫療途徑；如果是心理壓力，請尋求專業心理諮商，切勿盲目相信不可證偽的怪力亂神。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="noResults" class="hidden text-center text-gray-500 py-8">
+                找不到符合的問答，請嘗試其他關鍵字。
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 text-center py-8 text-gray-500 text-sm mt-12">
+        <p>本網站內容源自網路反詐騙與事件討論還原。願世上少一點利用恐懼的斂財，多一點理智與善良。</p>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // FAQ Accordion Logic
+            const faqButtons = document.querySelectorAll('.faq-button');
+            
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    const parent = button.parentElement;
+                    
+                    // Close others
+                    document.querySelectorAll('.faq-answer').forEach(el => {
+                        if (el !== answer) {
+                            el.classList.remove('open');
+                            el.parentElement.classList.remove('open');
+                        }
+                    });
+
+                    // Toggle current
+                    answer.classList.toggle('open');
+                    parent.classList.toggle('open');
+                });
+            });
+
+            // Search Logic
+            const searchInput = document.getElementById('searchInput');
+            const faqItems = document.querySelectorAll('.faq-item');
+            const noResults = document.getElementById('noResults');
+
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase().trim();
+                let visibleCount = 0;
+
+                faqItems.forEach(item => {
+                    const questionText = item.querySelector('.faq-button span').textContent.toLowerCase();
+                    const answerText = item.querySelector('.faq-answer div').textContent.toLowerCase();
+                    const keywords = item.getAttribute('data-keywords').toLowerCase();
+                    
+                    if (questionText.includes(searchTerm) || answerText.includes(searchTerm) || keywords.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                if (visibleCount === 0) {
+                    noResults.classList.remove('hidden');
+                } else {
+                    noResults.classList.add('hidden');
+                }
+                
+                // If searching, auto-scroll to FAQ section smoothly if not already in view
+                if (searchTerm.length > 1) {
+                    const faqSection = document.getElementById('faq');
+                    const rect = faqSection.getBoundingClientRect();
+                    if(rect.top > window.innerHeight || rect.bottom < 0) {
+                        faqSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
